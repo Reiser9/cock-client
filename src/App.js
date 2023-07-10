@@ -6,19 +6,19 @@ import { Navigation } from 'swiper/modules';
 import "./App.css";
 import 'swiper/css';
 
-import useMetamask from './hooks/useMetamask';
+// import useMetamask from './hooks/useMetamask';
 
 import SwiperNav from './Components/SwiperNav';
 import FaqItem from './Components/FaqItem';
 import Marquee from './Components/Marquee';
 
 const App = () => {
-    const [step, setStep] = React.useState(1);
-    const [telegram, setTelegram] = React.useState("");
-    const [twitter, setTwitter] = React.useState("");
-    const [complete, setComplete] = React.useState(true);
+    // const [step, setStep] = React.useState(1);
+    // const [telegram, setTelegram] = React.useState("");
+    // const [twitter, setTwitter] = React.useState("");
+    // const [complete, setComplete] = React.useState(true);
 
-    const {isLoading, connect, setSocial, checkComplete} = useMetamask();
+    // const {isLoading, connect, setSocial, checkComplete} = useMetamask();
 
     React.useEffect(() => {
         const close = () => {
@@ -96,9 +96,9 @@ const App = () => {
         });
     }, []);
 
-    React.useEffect(() => {
-        checkComplete(setStep);
-    }, []);
+    // React.useEffect(() => {
+    //     checkComplete(setStep);
+    // }, []);
 
     return(
         <>
@@ -123,9 +123,9 @@ const App = () => {
                             <a href="#" className="header__menu--link go" data-point="faq">FAQ</a>
                         </nav>
 
-                        <button className="button header__button">
+                        <a href="https://drive.google.com/file/d/1EDYJMc2rmN5awTQTkDdObq3OUGR8D7I_/view" target="_blank" className="header__button">
                             White paper
-                        </button>
+                        </a>
 
                         <div className="mobile__menu">
                             <a href="#" className="mobile__menu--link go" data-point="about">About Us</a>
@@ -194,25 +194,25 @@ const App = () => {
                         </div>
 
                         <div className="airdrop__content">
-                            <p className="airdrop__subtitle">
-                                {complete ? "Follow the steps to get involved" : "You have not completed all the tasks"}
-                            </p>
+                            <div className="airdrop__connect">
+                                <p className="airdrop__subtitle">
+                                    Participate in the Airdrop Campaign to receive <span>$15 worth of $COCK</span>
+                                </p>
 
-                            {step === 1 && <div className="airdrop__connect">
                                 <div className="airdrop__text--inner">
                                     <p className="airdrop__connect--text">
-                                        Connect your wallet to participate
+                                        Fill out the google form to participate in the airdrop
                                     </p>
 
-                                    <img src="/assets/img/metamask.svg" alt="metamask" />
+                                    <img src="/assets/img/rocket.png" alt="rocket" />
                                 </div>
 
-                                <button className={`button airdrop__item--button airdrop__connect--button ${isLoading ? " isloading" : ""}`} onClick={() => connect(setStep)}>
-                                    Connect Metamask
-                                </button>
-                            </div>}
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScqbQkjieIkPwIypjSN3UoeXy-JSxIb9vaJ82clar8qVxJ5Lg/viewform" target="_blank" className="button airdrop__item--button airdrop__connect--button">
+                                    Get involved
+                                </a>
+                            </div>
 
-                            {step === 2 && <>
+                            {/* {step === 2 && <>
                                 <div className="airdrop__items">
                                     <div className="airdrop__item">
                                         <p className="airdrop__item--text">
@@ -314,7 +314,7 @@ const App = () => {
 
                             {step === 4 && <div className="airdrop__connect">
                                 <p className="check__title">You are already included in the airdrop. Follow us on Twitter for updates</p>
-                            </div>}
+                            </div>} */}
                         </div>
                     </div>
                 </div>

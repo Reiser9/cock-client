@@ -292,8 +292,14 @@ input::-webkit-inner-spin-button{
 
 .airdrop__subtitle{
 	color: #fff;
+	font-weight: 500;
 	font-size: 3.2rem;
 	text-transform: uppercase;
+	text-align: center;
+}
+
+.airdrop__subtitle span{
+	color: #FFB63B;
 }
 
 .airdrop__items{
@@ -376,7 +382,7 @@ span{
 	justify-content: center;
 	gap: 20px;
 	padding: 2.4rem;
-	margin-top: 4.5rem;
+	flex-grow: 1;
 }
 
 .airdrop__text--inner{
@@ -394,7 +400,7 @@ span{
 .airdrop__connect--text{
 	font-size: 1.8rem;
 	color: #fff;
-	font-weight: 700;
+	font-weight: 500;
 	font-family: 'Poppins', sans-serif;
 }
 
